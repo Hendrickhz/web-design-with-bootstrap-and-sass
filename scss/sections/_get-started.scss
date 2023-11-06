@@ -1,0 +1,38 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.contact{
+    padding: 4rem 0;
+    background-color: $gray-200;
+
+    .cta-info{
+        padding: 1rem;
+        @include media-breakpoint-up(md){
+            padding: 3rem;
+        }
+        margin: 1rem 0;
+
+        &__list{
+            list-style-type: none;
+            position: relative;
+            padding: 0.5rem 0 0.5rem 0;
+            margin-bottom: 0.7rem;
+
+            li{
+                display: block;
+                margin-left: -5px;
+            }
+
+        }
+    }
+}
+//form content
+.form{
+    padding: 1rem;
+    @include media-breakpoint-up(md){
+        padding: 3rem;
+    }
+    button{
+        border: none;
+    }
+}

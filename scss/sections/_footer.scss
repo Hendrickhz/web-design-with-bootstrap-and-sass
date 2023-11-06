@@ -1,0 +1,130 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+
+.up-footer{
+    padding: 2rem;
+    background-color: $footer;
+
+    .footer-info{
+        display: flex;
+        align-items: center;
+        gap:1rem;
+        margin-bottom: 1rem;
+        @include media-breakpoint-up(md){
+           margin-bottom: 0;
+        }
+        p{
+            margin: 0;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+
+        i{
+            color: $primary;
+            font-size: 2rem;
+        }
+        .info-text{
+            .text-main{
+                color: #fff;
+                transition:all 0.3s ease;
+                &:hover{
+                    color: $primary;
+                }
+            }
+            &--gray{
+                color: $gray-500;
+                margin-top: 4px;
+                font-size: 1rem;
+            }
+        }
+    }
+
+    
+}
+.social{
+    background-color: #212121;
+    padding: 1.5rem;
+    p{
+        margin: 0;
+    }
+
+    &--icons{
+        i{
+            font-size: 1.5rem;
+          
+            @include media-breakpoint-up(md){
+                font-size: 1.8rem;
+            }
+            color: $white;
+
+            &:hover{
+                color: $primary;
+                transition:all 0.3s ease;
+            }
+        }
+
+    }
+
+    &--divs{
+        margin-bottom: 1rem;
+        @include media-breakpoint-up(md){
+           margin-bottom: 0;
+        }
+    }
+}
+.company-info-footer{
+    background-color: $footer;
+    padding:2rem 1rem;
+
+    hr{
+        background-color: $white;
+        width: 60px;
+        height: 2px;
+        margin-bottom: 16px;
+        display: inline-block;
+    }
+
+    ul{
+        list-style-type: none;
+        padding: 0;
+
+        li{
+          
+
+            a{
+                text-decoration: none;
+                color: $white;
+                &:hover{
+                   
+                        color: $primary;
+                        text-decoration: underline;
+                        @include transitionProperty
+                   
+                }
+            }
+
+        }
+    }
+}
+.bottom-footer{
+    background-color: $black;
+    padding: 1.5rem;
+
+    p{
+        margin: 0;
+        color: $gray-600;
+        a{
+            color: $gray-300;
+            text-transform: capitalize;
+            &:hover{
+                   
+                color: $primary;
+                text-decoration: underline;
+                @include transitionProperty
+           
+        }
+        }
+    }
+}
